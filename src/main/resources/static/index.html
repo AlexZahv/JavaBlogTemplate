@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/java-blog.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-route.min.js"></script>
+    <script src="javaBlog.js"></script>
+    <script src="js/javaBlogController.js"></script>
+    <script src="js/navigationController.js"></script>
+    <script src="js/headerController.js"></script>
+    <script src="js/blogController.js"></script>
+</head>
+<body>
+<div id="java-blog" ng-app="javaBlog" ng-controller="javaBlogController">
+    <div class="container">
+        <div class="jumbotron java-blog-header" ng-controller="headerController">
+            <img ng-src="{{imgHeaderPath}}" id="headerImg"/>
+        </div>
+
+        <nav class="navbar" data-ng-controller="navigationController">
+            <ul class="nav navbar-nav nav-pills">
+                <li data-ng-class="{'active':isActive('/home')}"><a href="#home">Home</a></li>
+                <li data-ng-class="{'active':isActive('/news')}"><a href="#news">News</a></li>
+                <li data-ng-class="{'active':isActive('/blog')}"><a href="#blog">Blog</a></li>
+                <li data-ng-class="{'active':isActive('/books')}"><a href="#books">Books</a></li>
+                <li data-ng-class="{'active':isActive('/about')}"><a href="#about">About author</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="java-blog-body">
+            <div data-ng-view=""></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

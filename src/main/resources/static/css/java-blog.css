@@ -1,0 +1,26 @@
+body {
+
+}
+
+.java-blog-body{
+    border: 1px solid cornflowerblue;
+    border-radius: 6px;
+}
+.java-blog-header{
+    padding:0;
+   text-align: center;
+    background-color: white;
+    border: solid white 1px;
+    border-radius:5px;
+}
+#headerImg{
+    height: 150px;
+    width: 100%;
+}
+.java-blog-body{
+    padding: 20px 10px 20px 10px;
+}
+.java-blog-section-header{
+    font-size: 26px;
+    text-align: center;
+}
